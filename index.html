@@ -108,7 +108,18 @@
     text-decoration: none;
     padding: 1.25rem 2rem;
     transition: background 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
   }
+.hero-cta-secondary {
+    background: transparent;
+    border: 1px solid var(--cream);
+    color: var(--cream);
+}
+.hero-cta-secondary:hover {
+    background: var(--cream);
+    color: var(--black);
+}
   .hero-cta:hover { background: var(--red); }
   .hero-right {
     display: flex;
@@ -201,12 +212,12 @@
   </a>
   </nav>
 <section class="hero">
-  <div class="hero-left">
-    <p class="hero-eyebrow">The Power Network · Est. 2026</p>
-    <h1 class="hero-headline">Women<br>who <em>actually</em><br>execute.</h1>
-    <p class="hero-body">We are the antidote to the aesthetic-led collective. A high-utility infrastructure for women navigating the intersection of tech, leadership, and performance.</p>
-    <a href="#join" class="hero-cta">Apply for Access <span class="arrow">→</span></a>
-  </div>
+ <div class="hero-left">
+    <p class="hero-eyebrow">A High-Performance Network · Est. 2026</p>
+    <h1 class="hero-headline">Women<br>who <em>actually</em><br>get it done.</h1>
+    <p class="hero-body">We are the infrastructure for women who move fast. A high-utility collective designed for the intersection of leadership, tech, and real-world execution.</p>
+    <a href="#join" class="hero-cta">Join the Vanguard. <span class="arrow">→</span></a>
+</div>
   <div class="hero-right">
     <div class="year-stamp">2026</div>
     <p style="font-family:'Playfair Display'; font-size:32px; font-style:italic;">"Systems over vibes."</p>
@@ -220,44 +231,56 @@
 
 <section class="manifesto" id="manifesto">
   <div class="manifesto-label"><span>The Philosophy</span></div>
-  <div class="manifesto-content">
-    <p>We believe the highest-performing women are too busy building to ask for what they need. <strong>WWA</strong> provides the curation layer they don't have time to seek out.</p>
-    <p>From the Amazon boardroom to the high-altitude trail, we equip the <em>Multitude</em> with the tools and networks required for relentless execution.</p>
-  </div>
+ <div class="manifesto-content">
+    <p>We believe high-achieving women shouldn't have to search for the tools they need to stay at the top of their game. <strong>WWA</strong> handles the vetting and the networking for you.</p>
+    <p>Whether you're in a boardroom or building a startup, we provide the resources, the connections, and the community to help you execute your vision without the burnout.</p>
+</div>
 </section>
 
 <section class="pillars">
   <div class="pillar">
     <span class="pillar-num">01</span>
-    <h3 class="pillar-title">Curate</h3>
-    <p style="font-size:14px; color:var(--muted);">We vet high-performance tools and botanical protocols before they hit the mainstream.</p>
+    <h3 class="pillar-title">Vetted Tools</h3>
+    <p style="font-size:14px; color:var(--muted);">We find and test the best wellness and productivity tools so you don't have to.</p>
   </div>
   <div class="pillar">
     <span class="pillar-num">02</span>
-    <h3 class="pillar-title">Connect</h3>
-    <p style="font-size:14px; color:var(--muted);">A non-indexed directory of decision-makers in Tech, Gov, and Business Leadership.</p>
+    <h3 class="pillar-title">Real Connection</h3>
+    <p style="font-size:14px; color:var(--muted);">Access a curated community of leaders in tech, strategy, and business.</p>
   </div>
   <div class="pillar">
     <span class="pillar-num">03</span>
-    <h3 class="pillar-title">Activate</h3>
-    <p style="font-size:14px; color:var(--muted);">In-person integration sprints designed for the modern matriarchy.</p>
+    <h3 class="pillar-title">Expert Events</h3>
+    <p style="font-size:14px; color:var(--muted);">In-person meetups and digital workshops focused on practical growth and strategy.</p>
   </div>
   <div class="pillar">
     <span class="pillar-num">04</span>
-    <h3 class="pillar-title">Capital</h3>
-    <p style="font-size:14px; color:var(--muted);">Directing resources into the hands of women who actually do the work.</p>
+    <h3 class="pillar-title">Resources</h3>
+    <p style="font-size:14px; color:var(--muted);">Directing capital and opportunities toward women who are ready to scale.</p>
   </div>
 </section>
-
 <section class="join" id="join">
-  <h2 style="font-family:'Playfair Display'; font-size:48px; margin-bottom:2rem;">Founded by Elizabeth Blockman</h2>
-  <p style="max-width:600px; margin: 0 auto 3rem; color:rgba(245,240,232,0.6);">Elizabeth founded WWA to solve the "Discovery Gap" for women in high-stakes execution roles. Leveraging her background in business leadership and project management, she is building the infrastructure the Girl Boss era lacked.</p>
-  <a href="mailto:elizabeth@womenwhoactually.com" class="hero-cta" style="background:var(--red);">Contact Partnerships</a>
+  <p class="hero-eyebrow" style="color:var(--cream); margin-bottom:1rem;">The Vanguard</p>
+  <h2 style="font-family:'Playfair Display'; font-size:clamp(32px, 4vw, 56px); margin-bottom:2rem; line-height:1.1;">
+    Join the movement of women<br>who <em>actually</em> execute.
+  </h2>
+  
+  <p style="max-width:700px; margin: 0 auto 3rem; color:rgba(245,240,232,0.8); font-size:18px;">
+    WWA is a growing collective of founders, strategists, and leaders. We aren't just another network; we are a high-utility infrastructure for the modern matriarchy. Whether you want to partner with us, join our next activation, or simply share the work you are doing—we want to hear from you.
+  </p>
+
+  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <a href="mailto:elizabeth@womenwhoactually.com?subject=Joining the Vanguard" class="hero-cta" style="background:var(--red);">
+      Join the Vanguard
+    </a>
+    <a href="mailto:elizabeth@womenwhoactually.com?subject=Sharing my work" class="hero-cta" style="background:transparent; border: 1px solid var(--cream);">
+      Share what you're doing
+    </a>
+  </div>
 </section>
 
 <footer>
   <span>© 2026 Women Who Actually</span>
-  <span>New York · DMV</span>
 </footer>
 
 </body>
