@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWA | Women Who Actually</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0e0c0a;
+    --cream: #f5f0e8;
+    --warm-white: #faf8f4;
+    --red: #BE0000; /* Arterial Red */
+    --red-dark: #800000;
+    --muted: #7a7060;
+    --border: rgba(14,12,10,0.12);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--warm-white);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+  }
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1;
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+}
+.nav-logo .top {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--black);
+}
+.nav-logo .bottom {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: -0.02em;
+}
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 72px;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem 5rem 3rem;
+    border-right: 1px solid var(--border);
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+  }
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+  .hero-headline em { font-style: italic; color: var(--red); }
+  .hero-body {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--muted);
+    max-width: 460px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.25rem 2rem;
+    transition: background 0.2s;
+  }
+  .hero-cta:hover { background: var(--red); }
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem 3rem;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .year-stamp {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 120px;
+    font-weight: 500;
+    color: rgba(14,12,10,0.06);
+    line-height: 1;
+  }
+  .activation-banner {
+    background: var(--black);
+    color: var(--cream);
+    padding: 1rem 3rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+  .manifesto {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 1px solid var(--border);
+  }
+  .manifesto-label {
+    padding: 5rem 3rem;
+    border-right: 1px solid var(--border);
+  }
+  .manifesto-label span {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .manifesto-content { padding: 5rem 4rem 5rem 3rem; }
+  .manifesto-content p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--border);
+  }
+  .pillar { padding: 4rem 2rem; border-right: 1px solid var(--border); }
+  .pillar:last-child { border-right: none; }
+  .pillar-num { font-family: 'DM Mono', monospace; color: var(--red); font-size: 11px; margin-bottom: 1rem; display: block; }
+  .pillar-title { font-family: 'Playfair Display', serif; font-size: 24px; font-style: italic; margin-bottom: 1rem; }
+  .join {
+    background: var(--black);
+    color: var(--cream);
+    padding: 8rem 3rem;
+    text-align: center;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="top">Women Who</span>
+    <span class="bottom">ACTUALLY.</span>
+  </a>
+  </nav>
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">The Power Network · Est. 2026</p>
+    <h1 class="hero-headline">Women<br>who <em>actually</em><br>execute.</h1>
+    <p class="hero-body">We are the antidote to the aesthetic-led collective. A high-utility infrastructure for women navigating the intersection of tech, leadership, and performance.</p>
+    <a href="#join" class="hero-cta">Apply for Access <span class="arrow">→</span></a>
+  </div>
+  <div class="hero-right">
+    <div class="year-stamp">2026</div>
+    <p style="font-family:'Playfair Display'; font-size:32px; font-style:italic;">"Systems over vibes."</p>
+  </div>
+</section>
+
+<div class="activation-banner">
+  <span>Current Activation: May 2026 Protocol</span>
+  <span>Cohort: 19 Vanguards (Tech/Gov/Strategy)</span>
+</div>
+
+<section class="manifesto" id="manifesto">
+  <div class="manifesto-label"><span>The Philosophy</span></div>
+  <div class="manifesto-content">
+    <p>We believe the highest-performing women are too busy building to ask for what they need. <strong>WWA</strong> provides the curation layer they don't have time to seek out.</p>
+    <p>From the Amazon boardroom to the high-altitude trail, we equip the <em>Multitude</em> with the tools and networks required for relentless execution.</p>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="pillar">
+    <span class="pillar-num">01</span>
+    <h3 class="pillar-title">Curate</h3>
+    <p style="font-size:14px; color:var(--muted);">We vet high-performance tools and botanical protocols before they hit the mainstream.</p>
+  </div>
+  <div class="pillar">
+    <span class="pillar-num">02</span>
+    <h3 class="pillar-title">Connect</h3>
+    <p style="font-size:14px; color:var(--muted);">A non-indexed directory of decision-makers in Tech, Gov, and Business Leadership.</p>
+  </div>
+  <div class="pillar">
+    <span class="pillar-num">03</span>
+    <h3 class="pillar-title">Activate</h3>
+    <p style="font-size:14px; color:var(--muted);">In-person integration sprints designed for the modern matriarchy.</p>
+  </div>
+  <div class="pillar">
+    <span class="pillar-num">04</span>
+    <h3 class="pillar-title">Capital</h3>
+    <p style="font-size:14px; color:var(--muted);">Directing resources into the hands of women who actually do the work.</p>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <h2 style="font-family:'Playfair Display'; font-size:48px; margin-bottom:2rem;">Founded by Elizabeth Blockman</h2>
+  <p style="max-width:600px; margin: 0 auto 3rem; color:rgba(245,240,232,0.6);">Elizabeth founded WWA to solve the "Discovery Gap" for women in high-stakes execution roles. Leveraging her background in business leadership and project management, she is building the infrastructure the Girl Boss era lacked.</p>
+  <a href="mailto:elizabeth@womenwhoactually.com" class="hero-cta" style="background:var(--red);">Contact Partnerships</a>
+</section>
+
+<footer>
+  <span>© 2026 Women Who Actually</span>
+  <span>New York · DMV</span>
+</footer>
+
+</body>
+</html>
